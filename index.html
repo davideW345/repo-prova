@@ -1,0 +1,47 @@
+<html>
+<head>
+
+    <title>
+        Ordine Alfabetico
+    </title>
+
+    <style>
+        .body{
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h3>Inserisci la parola: </h3>
+    
+    <input type="text" id="valore"></input>
+    
+    <button type="button" id="bottone">Inserisci</button>
+    
+    <div id="elenco">
+        
+    </div>
+    
+    <script>
+	
+		document.getElementById("bottone").onclick = ordineAlfabetico;
+
+		function ordineAlfabetico(){
+			
+			var arr = [];
+			var val = document.getElementById("valore").value;
+			
+			arr.push(val);
+			arr.sort();
+			
+			var str = arr.toString();
+			document.getElementById("elenco").innerHTML += arr;
+		}
+		
+	</script>
+    
+    </body>
+</html>
